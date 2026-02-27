@@ -1,0 +1,124 @@
+:root{
+  --blue:#0F3758;
+  --text:#18212D;
+  --muted:#647382;
+  --alt:#F7F9FC;
+  --border: rgba(15,55,88,.15);
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  color:var(--text);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  background:#fff;
+}
+
+.container{max-width:1120px;margin:0 auto;padding:0 24px}
+
+.topbar{
+  border-bottom:1px solid var(--border);
+  padding:18px 0;
+  background:#fff;
+}
+.logo{height:34px;width:auto;display:block}
+
+.hero{
+  position:relative;
+  padding:76px 0 56px;
+  overflow:hidden;
+}
+
+/* Subtle abstract grid (no external asset needed) */
+.hero::after{
+  content:"";
+  position:absolute; inset:0;
+  background:
+    radial-gradient(circle at 75% 25%, rgba(15,55,88,.10), transparent 55%),
+    linear-gradient(to right, rgba(15,55,88,.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(15,55,88,.06) 1px, transparent 1px);
+  background-size: auto, 44px 44px, 44px 44px;
+  background-position: center, right 20px top 20px, right 20px top 20px;
+  opacity:.22;
+  pointer-events:none;
+}
+
+.heroInner{
+  position:relative;
+  z-index:1;
+  max-width:760px;
+}
+
+h1{
+  font-size:44px;
+  line-height:1.1;
+  letter-spacing:-0.02em;
+  margin:0 0 14px;
+  font-weight:700;
+}
+.sub{
+  font-size:18px;
+  line-height:1.55;
+  margin:0 0 18px;
+  color:var(--muted);
+}
+
+.bullets{margin:0 0 22px;padding-left:18px}
+.bullets li{margin:8px 0}
+
+.actions{
+  display:flex;
+  gap:14px;
+  align-items:center;
+  flex-wrap:wrap;
+  margin:0 0 14px;
+}
+
+.btn{
+  display:inline-block;
+  background:var(--blue);
+  color:#fff;
+  border:1px solid var(--blue);
+  padding:12px 18px;
+  border-radius:10px;
+  font-weight:650;
+  text-decoration:none;
+}
+.btn:hover{filter:brightness(1.08)}
+
+.link{
+  color:var(--blue);
+  text-decoration:none;
+  font-weight:650;
+}
+.link:hover{text-decoration:underline}
+
+.note{
+  margin:0;
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.5;
+  max-width:56ch;
+}
+
+.footer{
+  border-top:1px solid var(--border);
+  padding:20px 0;
+  font-size:12px;
+  color:var(--muted);
+}
+.footerInner{
+  display:flex;
+  gap:16px;
+  align-items:flex-start;
+  justify-content:space-between;
+  flex-wrap:wrap;
+}
+.logoSmall{height:24px;width:auto;display:block}
+.footerRight{text-align:right}
+
+@media (max-width:720px){
+  h1{font-size:34px}
+  .footerRight{text-align:left}
+}
