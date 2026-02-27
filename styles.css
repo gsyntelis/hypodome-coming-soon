@@ -39,8 +39,6 @@ body{
   position:relative;
   padding:76px 0 56px;
   overflow:hidden;
-
-  flex:1;
 }
 
 /* Subtle abstract grid (no external asset needed) */
